@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Create or edit the SSH client configuration file
+cat > ~/.ssh/config <<EOF
+Host *
+    PasswordAuthentication no
+
+Host 107.23.43.19
+    IdentityFile ~/.ssh/school
+EOF
+
+# Ensure the permissions of the SSH configuration file are set to 600
+chmod 600 ~/.ssh/config
+
+echo "SSH client configuration updated successfully."
+
